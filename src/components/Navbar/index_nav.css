@@ -1,0 +1,72 @@
+.container {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.logo{
+    height: 40px;
+    width: 50px;
+}
+
+.nav-item {
+    width: 80px;
+    text-align: center;
+}
+
+.icon-home {
+    width: 20px;
+}
+
+.icon-about {
+    width: 15px;
+}
+
+.icon-envelope {
+    width: 20px;
+}
+
+
+.home {
+    color: cornflowerblue;
+
+    &:hover {
+        background-color: aliceblue;
+        color: black;
+    }
+}
+
+.about {
+    color: cornflowerblue;
+
+    &:hover {
+        background-color: aliceblue;
+        color: black;
+    }
+}
+
+.contact {
+    color: cornflowerblue;
+
+    &:hover {
+        background-color: aliceblue;
+        color: black;
+    }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+hr {
+    color: green;
+    margin: 0;
+    padding: 0;
+    opacity: 15%;
+}
+
+a:active{
+    background-color: white;
+}

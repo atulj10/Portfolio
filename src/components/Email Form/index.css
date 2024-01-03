@@ -1,0 +1,130 @@
+.form-container {
+    text-align: center;
+    padding-top: 7%;
+    animation: comein2 2s;
+}
+
+@keyframes comein2 {
+    0% {
+        padding-top: 0;
+    }
+
+}
+
+
+form {
+    margin-top: 3%;
+    padding-left: 35%;
+    display: grid;
+    grid-gap: 7px;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+        "main main sidebar sidebar"
+        /* "subject subject subject subject" */
+        "footer footer footer footer"
+        ". submit  submit  .";
+    animation: comein 1s ease-out;
+}
+
+.half1 {
+    grid-area: main;
+    animation: comein 0.25s ease-in;
+    transition: transform 0.5s, backgorund-color 0.5s;
+
+    &:hover {
+        transform: scale(1.25);
+        background-color: #F3F8FF;
+    }
+}
+
+.half {
+    grid-area: sidebar;
+    transition: transform 0.5s, backgorund-color 0.5s;
+
+    &:hover {
+        transform: scale(1.25);
+        background-color: #F3F8FF;
+    }
+}
+
+.message {
+    padding: 10px;
+    grid-area: footer;
+    border: none;
+    border-radius: 10px;
+    background-color: azure;
+    transition: transform 0.5s, backgorund-color 0.5s;
+
+    &:hover {
+        transform: scale(1.25);
+        border: solid;
+        background-color: #F3F8FF;
+    }
+}
+
+.submit {
+    grid-area: submit;
+    transition: transform 0.5s, backgorund-color 0.5s;
+
+    &:hover {
+        transform: scale(1.25);
+        background-color: #F3F8FF;
+    }
+}
+
+
+.half {
+    grid-area: "sidebar";
+}
+
+input {
+    padding: 3%;
+    border: none;
+    border-radius: 10px;
+    background-color: azure;
+    transition: border 1s;
+
+    &:hover {
+        border: solid;
+    }
+}
+
+@keyframes comein {
+    0% {
+        margin-top: 0;
+    }
+
+}
+
+@media only screen and (max-height:850px) and (max-width:420px) {
+    form {
+        margin-left: 0;
+        padding-left: 5px;
+        padding-right: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "main main main"
+            "sidebar sidebar sidebar"
+            "footer footer footer "
+            ".  submit  .";
+    }
+
+    .half1 {
+        grid-area: main;
+    }
+
+    .half {
+        grid-area: sidebar;
+    }
+
+    .message {
+        grid-area: footer;
+    }
+
+    .submit {
+        grid-area: submit;
+    }
+}

@@ -1,0 +1,89 @@
+.contact-title {
+    margin-top: 5%;
+    padding-left: 35%;
+    animation: bottomup 1s;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 2%;
+}
+
+.card {
+    text-align: center;
+    margin: 40px;
+    height: 220px;
+    width: 70%;
+    border-radius: 45px;
+    border-color: #BFCFE7;
+    line-height: 2;
+    background-color: whitesmoke;
+    animation: bottomup 2s;
+    transition: transform 0.25s, background-color 0.5s;
+
+    &:hover {
+        transform: scale(1.25);
+        background-color: #F8EDFF;
+
+        .btn {
+            transform: rotateY(360deg);
+        }
+    }
+}
+
+@keyframes bottomup {
+    0% {
+        margin-top: 0;
+    }
+}
+
+.card-title {
+    font-size: 35px;
+}
+
+
+.btn {
+    position: absolute;
+    bottom: 30%;
+    right: 40%;
+    border-radius: 20px;
+    margin-top: 150px;
+    transition: transform 1s;
+
+}
+
+.easter-egg {
+    transition: opacity 1s;
+    display: inline;
+
+    &:hover {
+        .emoji {
+            opacity: 0;
+        }
+
+        &::before {
+            content: "😉✨";
+        }
+    }
+}
+
+/* @media only screen and (max-height:850px) and (max-width:850px) {
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+} */
+
+@media only screen and (max-height:850px) and (max-width:420px) {
+
+    .contact-title {
+        padding-left: 50px;
+    }
+
+    .row{
+        margin-left: 40px;
+        width: 100%;
+    }
+}
