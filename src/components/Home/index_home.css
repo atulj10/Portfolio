@@ -1,13 +1,12 @@
 .loader {
     position: absolute;
-    left: 725px;
-    top: 200px;
+    left: 43%;
+    top: 15rem;
 }
 
 .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-left: 150px;
     animation: sidein 1.5s;
 
 }
